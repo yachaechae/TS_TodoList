@@ -4,7 +4,7 @@
 			"title": "공부하기",
 			"content": "타입스크립트 공부하기",
 			"id": 1,
-			"isDone": true
+			"isDone": false
 		},
 		{
 			"title": "공부하기",

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FormStyle, InputStyle, LabelStyle, SpanStyle } from "../style/InputStyle";
 import { MasterBtn } from "../style/MasterBtn";
-import { useStore } from "../store/stroe";
+import { useStore } from "../store/store";
 
 const defaultInput = {
 	todoId: 0,
@@ -14,17 +14,6 @@ export default function WriteTodo() {
 	const [title, setTitle] = useState<string>("");
 	const [content, setContent] = useState<string>("");
 
-	const [todo, setTodo] = useState(defaultInput);
-
-	// const todoText = (e: React.ChangeEvent) => {
-	// 	const { name, value } = e.target;
-
-	// 	setTodo({
-	// 		...todo,
-	// 		[name]: value,
-	// 	});
-	// };
-
 	const addTodo = useStore((state) => state.addTodo);
 	const addBtn = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
@@ -34,8 +23,6 @@ export default function WriteTodo() {
 			id: 0,
 			isDone: false,
 		});
-		setTitle("");
-		setContent("");
 	};
 
 	return (

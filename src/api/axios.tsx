@@ -15,8 +15,8 @@ export const axiosAddTodo = async (todo: Todo) => {
 	return res.data;
 };
 
-export const axiosToggleTodoStatus = async (id: number) => {
-	await url.patch(`/todos/${id}`, { isDone: true });
+export const axiosToggleTodoStatus = async (id: number, isDone: boolean) => {
+	await url.patch(`/todos/${id}`, { isDone: isDone });
 };
 
 export const axiosDeleteTodo = async (id: number) => {

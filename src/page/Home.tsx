@@ -3,7 +3,7 @@ import { GlobalStyle } from "../style/GlobalStyle";
 import TodoBoard from "../component/TodoBoard";
 import WriteTodo from "../component/WriteTodo";
 import Header from "../component/Header";
-import { useStore } from "../store/stroe";
+import { useStore } from "../store/store";
 
 export default function Home() {
 	const fetchTodos = useStore((state) => state.fetchTodos);

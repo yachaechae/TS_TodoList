@@ -1,5 +1,5 @@
 import React from "react";
-import { useStore } from "../store/stroe";
+import { useStore } from "../store/store";
 import TodoCard from "./TodoCard";
 import { BoardStyle, CategoryName } from "../style/TodoStyle";
 
