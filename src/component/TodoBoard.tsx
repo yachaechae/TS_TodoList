@@ -1,15 +1,15 @@
 import React from "react";
-import { useStore } from "../store/store";
 import TodoCard from "./TodoCard";
 import { BoardStyle, CategoryName } from "../style/TodoStyle";
+import { useTodos } from "../store/queryStore";
 
 export default function TodoBoard() {
-	const todos = useStore((state) => state.todos);
+	const { data: todos } = useTodos();
 	return (
 		<>
 			<CategoryName className="listTitle">Working 🧑‍💻</CategoryName>
 			<BoardStyle>
-				{todos.map((todoItem) => {
+				{todos?.map((todoItem) => {
 					if (!todoItem.isDone) {
 						return <TodoCard key={todoItem.id} {...todoItem} />;
 					}
@@ -17,7 +17,7 @@ export default function TodoBoard() {
 			</BoardStyle>
 			<CategoryName className="listTitle">Done! 🎊</CategoryName>
 			<BoardStyle>
-				{todos.map((todoItem) => {
+				{todos?.map((todoItem) => {
 					if (todoItem.isDone) {
 						return <TodoCard key={todoItem.id} {...todoItem} />;
 					}

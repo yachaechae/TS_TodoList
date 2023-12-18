@@ -1,23 +1,16 @@
 import React, { useState } from "react";
 import { FormStyle, InputStyle, LabelStyle, SpanStyle } from "../style/InputStyle";
 import { MasterBtn } from "../style/MasterBtn";
-import { useStore } from "../store/store";
-
-const defaultInput = {
-	todoId: 0,
-	todoTitle: "",
-	todoContent: "",
-	isDone: false,
-};
+import { useAddTodo } from "../store/queryStore";
 
 export default function WriteTodo() {
 	const [title, setTitle] = useState<string>("");
 	const [content, setContent] = useState<string>("");
 
-	const addTodo = useStore((state) => state.addTodo);
+	const addTodo = useAddTodo();
 	const addBtn = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		addTodo({
+		addTodo.mutate({
 			title,
 			content,
 			id: 0,

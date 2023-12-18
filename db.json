@@ -1,16 +1,16 @@
 {
-	"todos": [
-		{
-			"title": "공부하기",
-			"content": "타입스크립트 공부하기",
-			"id": 1,
-			"isDone": false
-		},
-		{
-			"title": "공부하기",
-			"content": "next.js 공부하기",
-			"id": 2,
-			"isDone": false
-		}
-	]
+  "todos": [
+    {
+      "title": "공부하기",
+      "content": "타입스크립트 공부하기",
+      "id": 1,
+      "isDone": false
+    },
+    {
+      "title": "공부하기",
+      "content": "next.js 공부하기",
+      "id": 2,
+      "isDone": false
+    }
+  ]
 }
