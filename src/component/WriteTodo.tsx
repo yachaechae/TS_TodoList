@@ -3,13 +3,6 @@ import { FormStyle, InputStyle, LabelStyle, SpanStyle } from "../style/InputStyl
 import { MasterBtn } from "../style/MasterBtn";
 import { useStore } from "../store/store";
 
-const defaultInput = {
-	todoId: 0,
-	todoTitle: "",
-	todoContent: "",
-	isDone: false,
-};
-
 export default function WriteTodo() {
 	const [title, setTitle] = useState<string>("");
 	const [content, setContent] = useState<string>("");
